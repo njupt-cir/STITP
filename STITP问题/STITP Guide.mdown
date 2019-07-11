@@ -1,0 +1,56 @@
+# Sublinux
+	> 控制面板 -> 程序和功能 -> 启用适用于Linux的windows子系统
+	> 打开 Microsoft Store -> WSL -> acquire -> install ubuntu
+
+## open ubuntu
+	> cmd -> ubuntu
+
+# ssh
+	> ssh username@ip_address
+	> ssh renqiang@10.5.42.31
+	> get in file path : "/home1/renqiang/" in zsh
+
+	>> zsh 是一种不同于bash的终端解释器
+	>> vim 文本编辑器
+
+
+## Linux小知识
+	> / --> 根目录
+	> ~ --> 家目录
+	> . --> 当前路径
+	> .. --> 上一层路径
+	> ./相对当前路径
+	> ../相对上一层路径
+
+
+## Screen 使用方法
+# 避免终端断开连接时任务中断
+	> 创建screen --> screen -S "name"
+	> 切换screen --> 到后台运行 Ctrl + A + D
+	> 进入screen --> screen -r name
+
+
+
+# img-compression
+1. ssh in renqiang user
+2. source activate imgcomp
+3. python val.py ../ckpts 0515_1310 ../cifar10/ttest  --save_ours --out_qbits --reset   #在这个情景下 ttest仅为演示所用，里面有几张示例图片     val中 这些是传进去的参数
+
+cifar10 --> train test
+coco --> train val
+nuswide --> images
+
+>> 理解什么是精度precision什么是召回率recall
+>> 验证集，测试集，训练集 https://zhuanlan.zhihu.com/p/35394638
+
+>> BatchNorm和GroupNorm之间的差别
+>> alexnet 学习
+>> architecture --> comp_origin_alexnet.py 原始alexnet结构
+>> utils.py --> comp_alexnet_layers 修改过的alexnet结构
+
+>> python列表推导式 
+>> lambda表达式
+>> L1/L2正则化损失
+>> tf optimizer学习
+
+>> tf 梯度反向传播的自动方法和分部方法 compute_gradients  apply_gradients
